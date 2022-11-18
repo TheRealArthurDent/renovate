@@ -3,6 +3,10 @@
   "dryRun": false,
   "username": "renovate",
   "gitAuthor": "Renovate Bot <118576523+P4ranoidAndroid@users.noreply.github.com>",
+  "reviewers": [
+    "TheRealArthurDent",
+    "LunaticGardener"
+  ],
   "onboarding": true,
   "platform": "github",
   "includeForks": false,
