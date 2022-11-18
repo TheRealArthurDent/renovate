@@ -7,7 +7,8 @@
   "platform": "github",
   "includeForks": false,
   "repositories": [
-    "TheRealArthurDent/renovate"
+    "TheRealArthurDent/renovate",
+    "TheRealArthurDent/raspberry
   ],
   "packageRules": [
   ]
