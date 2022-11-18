@@ -1,0 +1,14 @@
+{
+  "branchPrefix": "renovate/",
+  "dryRun": false,
+  "username": "renovate",
+  "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
+  "onboarding": true,
+  "platform": "github",
+  "includeForks": false,
+  "repositories": [
+    "TheRealArthurDent/renovate"
+  ],
+  "packageRules": [
+  ]
+}
