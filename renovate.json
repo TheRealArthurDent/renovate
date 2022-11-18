@@ -8,7 +8,7 @@
   "includeForks": false,
   "repositories": [
     "TheRealArthurDent/renovate",
-    "TheRealArthurDent/raspberry
+    "TheRealArthurDent/raspberry"
   ],
   "packageRules": [
   ]
