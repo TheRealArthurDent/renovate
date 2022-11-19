@@ -21,5 +21,10 @@
     "TheRealArthurDent/esp8266-mqtt-client"
   ],
   "packageRules": [
+    {
+      "matchPackageNames": "renovate/github-action",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "autoMerge": true
+    }
   ]
 }
