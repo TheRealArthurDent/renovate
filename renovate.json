@@ -17,7 +17,8 @@
     "TheRealArthurDent/nextcloud",
     "TheRealArthurDent/erika-infrastructure",
     "TheRealArthurDent/erika-nextcloud",
-    "TheRealArthurDent/esp8266-wifi-participant"
+    "TheRealArthurDent/esp8266-wifi-participant",
+    "TheRealArthurDent/esp8266-mqtt-client"
   ],
   "packageRules": [
   ]
