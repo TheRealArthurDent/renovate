@@ -23,9 +23,17 @@
   ],
   "packageRules": [
     {
+      "description": "Auto merge all minor and patch updates to renovate itself. Do it without a PR to reduce noise.",
       "matchPackageNames": "renovate/github-action",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "description": "Create PRs for major changes to renovate itself.",
+      "matchPackageNames": "renovate/github-action",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
   ]
 }
