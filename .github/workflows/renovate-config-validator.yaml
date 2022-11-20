@@ -1,0 +1,13 @@
+name: Renovate Config Validator
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: rinchsan/renovate-config-validator@v0.0.7
+      with:
+        pattern: 'renovate.json'
