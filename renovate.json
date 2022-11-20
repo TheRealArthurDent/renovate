@@ -26,7 +26,7 @@
       "description": "Auto merge all minor and patch updates to renovate itself. Do it without a PR to reduce noise.",
       "matchPackageNames": "renovate/github-action",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "automerge": true,
       "automergeType": "branch"
     },
     {
