@@ -1,0 +1,26 @@
+{
+  "branchPrefix": "renovate/",
+  "dryRun": false,
+  "username": "renovate",
+  "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
+  "reviewers": [
+    "TheRealArthurDent",
+    "LunaticGardener"
+  ],
+  "onboarding": true,
+  "platform": "github",
+  "includeForks": false,
+  "repositories": [
+    "TheRealArthurDent/renovate",
+    "TheRealArthurDent/raspberry",
+    "TheRealArthurDent/smart-home",
+    "TheRealArthurDent/nextcloud",
+    "TheRealArthurDent/erika-infrastructure",
+    "TheRealArthurDent/erika-nextcloud",
+    "TheRealArthurDent/esp8266-wifi-participant",
+    "TheRealArthurDent/esp8266-mqtt-client",
+    "TheRealArthurDent/node-red-flows"
+  ],
+  "packageRules": [
+  ]
+}
