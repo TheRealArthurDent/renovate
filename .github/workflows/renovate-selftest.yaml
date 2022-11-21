@@ -1,6 +1,10 @@
 name: Renovate Self-test
 on:
   pull_request:
+  push:
+    branches:
+      - 'renovate/**'
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
