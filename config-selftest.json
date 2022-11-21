@@ -1,7 +1,7 @@
 {
   "branchPrefix": "renovate/",
   "branchNameStrict": true,
-  "dryRun": true,
+  "dryRun": "full",
   "username": "renovate",
   "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
   "reviewers": [
