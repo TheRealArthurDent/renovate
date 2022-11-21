@@ -1,37 +1,18 @@
 {
-  "branchPrefix": "renovate/",
-  "dryRun": false,
-  "username": "renovate",
-  "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
-  "reviewers": [
-    "TheRealArthurDent",
-    "LunaticGardener"
-  ],
-  "onboarding": true,
-  "platform": "github",
-  "includeForks": false,
-  "repositories": [
-    "TheRealArthurDent/renovate",
-    "TheRealArthurDent/raspberry",
-    "TheRealArthurDent/smart-home",
-    "TheRealArthurDent/nextcloud",
-    "TheRealArthurDent/erika-infrastructure",
-    "TheRealArthurDent/erika-nextcloud",
-    "TheRealArthurDent/esp8266-wifi-participant",
-    "TheRealArthurDent/esp8266-mqtt-client",
-    "TheRealArthurDent/node-red-flows"
-  ],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
       "description": "Auto merge all minor and patch updates to renovate itself. Do it without a PR to reduce noise.",
-      "matchPackageNames": "renovate/github-action",
+      "groupName": "renovate",
+      "matchPackageNames": "renovatebot/github-action",
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "automergeType": "branch"
     },
     {
       "description": "Create PRs for major changes to renovate itself.",
-      "matchPackageNames": "renovate/github-action",
+      "groupName": "renovate MAJOR",
+      "matchPackageNames": "renovatebot/github-action",
       "matchUpdateTypes": ["major"],
       "automerge": false
     }
