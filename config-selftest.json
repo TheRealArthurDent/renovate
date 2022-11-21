@@ -1,5 +1,6 @@
 {
   "branchPrefix": "renovate/",
+  "branchNameStrict": true,
   "dryRun": true,
   "username": "renovate",
   "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
