@@ -12,6 +12,7 @@
     {
       "description": "Create PRs for major changes to renovate itself.",
       "groupName": "renovate MAJOR",
+      "commitMessagePrefix": "[MAJOR] ",
       "matchPackageNames": "renovatebot/github-action",
       "matchUpdateTypes": ["major"],
       "automerge": false
