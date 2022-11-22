@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: rinchsan/renovate-config-validator@v0.0.7
+    - uses: rinchsan/renovate-config-validator@v0.0.12
       with:
         pattern: 'config.json'
-    - uses: rinchsan/renovate-config-validator@v0.0.7
+    - uses: rinchsan/renovate-config-validator@v0.0.12
       with:
         pattern: 'renovate.json'
