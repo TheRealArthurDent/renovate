@@ -1,6 +1,10 @@
 name: Renovate Self-test
 on:
   pull_request:
+  push:
+    branches:
+      - 'renovate/**'
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -8,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.1.0
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@v34.28.0
+        uses: renovatebot/github-action@v34.29.1
         with:
           configurationFile: config-selftest.json
           token: ${{ secrets.RENOVATE_TOKEN }}
