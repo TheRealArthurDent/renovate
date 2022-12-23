@@ -6,6 +6,9 @@
     "TheRealArthurDent",
     "LunaticGardener"
   ],
+  "assignees": [
+    "TheRealArthurDent"
+  ],
   "onboarding": true,
   "platform": "github",
   "includeForks": false,
