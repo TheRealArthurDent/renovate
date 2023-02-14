@@ -9,6 +9,7 @@
   "assignees": [
     "TheRealArthurDent"
   ],
+  "rebaseWhen": "behind-base-branch",
   "onboarding": true,
   "platform": "github",
   "includeForks": false,
