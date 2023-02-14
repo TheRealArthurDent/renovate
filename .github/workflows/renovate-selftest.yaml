@@ -6,7 +6,7 @@ on:
       - 'renovate/**'
 
 jobs:
-  renovate:
+  self-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
