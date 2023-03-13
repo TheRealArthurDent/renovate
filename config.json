@@ -12,7 +12,7 @@
   "rebaseWhen": "behind-base-branch",
   "onboarding": true,
   "platform": "github",
-  "includeForks": false,
+  "forkProcessing": "disabled",
   "repositories": [
     "TheRealArthurDent/renovate",
     "TheRealArthurDent/raspberry",
