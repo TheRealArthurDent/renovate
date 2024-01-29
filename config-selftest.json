@@ -2,7 +2,6 @@
   "branchPrefix": "renovate/",
   "branchNameStrict": true,
   "dryRun": "full",
-  "username": "renovate",
   "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
   "reviewers": [
     "TheRealArthurDent",
@@ -12,12 +11,7 @@
     "TheRealArthurDent"
   ],
   "rebaseWhen": "behind-base-branch",
-  "onboarding": true,
-  "platform": "github",
   "includeForks": false,
-  "repositories": [
-    "TheRealArthurDent/renovate"
-  ],
   "packageRules": [
   ]
 }
