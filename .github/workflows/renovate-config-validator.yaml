@@ -2,18 +2,17 @@ name: Renovate Config Validator
 
 on:
   pull_request:
+    branches:
+      - main
   push:
     branches:
-      - 'renovate/**'
+      - main
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4.1.1
-    - uses: rinchsan/renovate-config-validator@v0.0.12
-      with:
-        pattern: 'config.json'
     - uses: rinchsan/renovate-config-validator@v0.0.12
       with:
         pattern: 'renovate.json'
