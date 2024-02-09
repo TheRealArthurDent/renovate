@@ -1,9 +1,11 @@
 name: Renovate Self-test
 on:
   pull_request:
+    branches:
+      - main
   push:
     branches:
-      - 'renovate/**'
+      - main
 
 jobs:
   self-test:

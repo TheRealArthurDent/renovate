@@ -31,6 +31,6 @@
       "description": "Always create PRs for major changes.",
       "matchUpdateTypes": ["major"],
       "automerge": false
-    }  
+    }
   ]
 }
