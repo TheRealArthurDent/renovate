@@ -24,7 +24,8 @@
     "TheRealArthurDent/esp8266-ota-capable",
     "TheRealArthurDent/esp8266-mqtt-client",
     "TheRealArthurDent/leakage-sensor",
-    "TheRealArthurDent/node-red-flows"
+    "TheRealArthurDent/node-red-flows",
+    "TheRealArthurDent/iracing-settings"
   ],
   "packageRules": [
     {
