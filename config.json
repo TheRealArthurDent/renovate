@@ -1,6 +1,6 @@
 {
   "branchPrefix": "renovate/",
-  "username": "renovate",
+  "username": "renovate[bot]",
   "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
   "reviewers": [
     "TheRealArthurDent",
