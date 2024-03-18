@@ -27,11 +27,32 @@
     "TheRealArthurDent/node-red-flows",
     "TheRealArthurDent/iracing-settings"
   ],
+  "dependencyDashboard": true,
   "packageRules": [
     {
       "description": "Always create PRs for major changes.",
       "matchUpdateTypes": ["major"],
       "automerge": false
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "addLabels": ["patch"]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major"]
+    },
+    {
+      "matchCategories": ["docker"],
+      "addLabels": ["docker"]
+    },
+    {
+      "matchCategories": ["python"],
+      "addLabels": ["python"]
     }
   ]
 }
