@@ -27,7 +27,6 @@
     "TheRealArthurDent/node-red-flows",
     "TheRealArthurDent/iracing-settings"
   ],
-  "dependencyDashboard": true,
   "packageRules": [
     {
       "description": "Always create PRs for major changes.",
