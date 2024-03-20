@@ -14,8 +14,10 @@
   "platform": "github",
   "forkProcessing": "disabled",
   "repositories": [
-    "TheRealArthurDent/renovate",
-    "TheRealArthurDent/iracing-settings"
+    "TheRealArthurDent/esp8266-wifi-participant",
+    "TheRealArthurDent/esp8266-ota-capable",
+    "TheRealArthurDent/esp8266-mqtt-client",
+    "TheRealArthurDent/leakage-sensor"
   ],
   "dependencyDashboard": true,
   "packageRules": [

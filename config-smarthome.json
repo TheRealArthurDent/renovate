@@ -14,8 +14,12 @@
   "platform": "github",
   "forkProcessing": "disabled",
   "repositories": [
-    "TheRealArthurDent/renovate",
-    "TheRealArthurDent/iracing-settings"
+    "TheRealArthurDent/raspberry",
+    "TheRealArthurDent/smart-home",
+    "TheRealArthurDent/nextcloud",
+    "TheRealArthurDent/private-cloud-infrastructure",
+    "TheRealArthurDent/private-cloud-nextcloud",
+    "TheRealArthurDent/node-red-flows"
   ],
   "dependencyDashboard": true,
   "packageRules": [
