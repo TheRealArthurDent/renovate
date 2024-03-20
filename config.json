@@ -1,6 +1,6 @@
 {
   "branchPrefix": "renovate/",
-  "username": "renovate[bot]",
+  "username": "P4ranoidAndroid[bot]",
   "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
   "reviewers": [
     "TheRealArthurDent",
@@ -27,6 +27,7 @@
     "TheRealArthurDent/node-red-flows",
     "TheRealArthurDent/iracing-settings"
   ],
+  "dependencyDashboard": true,
   "packageRules": [
     {
       "description": "Always create PRs for major changes.",
