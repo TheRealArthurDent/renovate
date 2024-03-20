@@ -1,0 +1,50 @@
+{
+  "branchPrefix": "renovate/",
+  "username": "P4ranoidAndroid",
+  "gitAuthor": "Renovate Bot <118576523+P4ranoidAndroid@users.noreply.github.com>",
+  "reviewers": [
+    "TheRealArthurDent",
+    "LunaticGardener"
+  ],
+  "assignees": [
+    "TheRealArthurDent"
+  ],
+  "rebaseWhen": "behind-base-branch",
+  "onboarding": true,
+  "platform": "github",
+  "forkProcessing": "disabled",
+  "repositories": [
+    "TheRealArthurDent/esp8266-wifi-participant",
+    "TheRealArthurDent/esp8266-ota-capable",
+    "TheRealArthurDent/esp8266-mqtt-client",
+    "TheRealArthurDent/leakage-sensor"
+  ],
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "description": "Always create PRs for major changes.",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "addLabels": ["patch"]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major"]
+    },
+    {
+      "matchCategories": ["docker"],
+      "addLabels": ["docker"]
+    },
+    {
+      "matchCategories": ["python"],
+      "addLabels": ["python"]
+    }
+  ]
+}
