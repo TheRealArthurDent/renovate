@@ -1,6 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "reviewers": [],
+  "reviewers": [    
+    "TheRealArthurDent"
+  ],
   "packageRules": [
     {
       "description": "Auto merge all minor and patch updates to renovate itself. Do it without a PR to reduce noise.",
