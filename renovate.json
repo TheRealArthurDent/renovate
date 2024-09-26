@@ -11,6 +11,7 @@
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "automergeType": "branch",
+      "addLabels": ["auto-merge"],
       "schedule": ["before 5am on Monday"]
     },
     {
@@ -28,6 +29,7 @@
       "matchManagers": ["dockerfile"],
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
+      "addLabels": ["auto-merge"],
       "automergeType": "branch"
     },
     {
