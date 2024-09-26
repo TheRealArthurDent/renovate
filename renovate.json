@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "reviewers": [    
+  "reviewers": [
     "TheRealArthurDent"
   ],
   "packageRules": [
@@ -21,6 +21,22 @@
       "matchUpdateTypes": ["major"],
       "automerge": false,
       "schedule": ["before 5am on Monday"]
+    },
+    {
+      "description": "Auto merge all minor and patch updates to github-actions. Do it without a PR to reduce noise.",
+      "groupName": "github-actions",
+      "matchManagers": ["dockerfile"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "description": "Create PRs for major changes to github-actions itself.",
+      "groupName": "github-actions MAJOR",
+      "commitMessagePrefix": "[MAJOR] ",
+      "matchManagers": ["dockerfile"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
   ]
 }
