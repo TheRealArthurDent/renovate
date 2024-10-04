@@ -1,3 +1,4 @@
+# See https://yamllint.readthedocs.io/en/stable/configuration.html
 ---
 rules:
   anchors: enable
@@ -10,7 +11,7 @@ rules:
   comments-indentation:
     level: warning
   document-end: disable
-  # deviation from default https://yamllint.readthedocs.io/en/stable/configuration.html
+  # deviation from default
   document-start: disable
   empty-lines: enable
   empty-values: disable
@@ -27,5 +28,5 @@ rules:
   trailing-spaces: enable
   truthy:
     level: warning
-    # deviation from default https://yamllint.readthedocs.io/en/stable/configuration.html
+    # deviation from default
     check-keys: false
