@@ -44,6 +44,10 @@
     {
       "matchCategories": ["python"],
       "addLabels": ["python"]
+    },
+    {
+      "matchCategories": ["ci"],
+      "addLabels": ["ci"]
     }
   ]
 }
