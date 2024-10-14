@@ -1,4 +1,4 @@
-name: Renovate Config Validator
+name: 🔍 Config Validator
 
 on:
   pull_request:
