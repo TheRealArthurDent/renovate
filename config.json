@@ -1,53 +1,91 @@
 {
-  "branchPrefix": "renovate/",
-  "username": "P4ranoidAndroid",
-  "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
-  "reviewers": [
-    "TheRealArthurDent",
-    "LunaticGardener"
-  ],
   "assignees": [
     "TheRealArthurDent"
   ],
-  "rebaseWhen": "behind-base-branch",
-  "onboarding": true,
-  "platform": "github",
+  "branchPrefix": "renovate/",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update rev variables in pre-commit-config",
+      "fileMatch": [
+        "^.pre-commit-config.yaml$"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s+rev:\\s+[\"']?(?<currentValue>[\\w+\\.\\-]*)[\"']?"
+      ]
+    }
+  ],
+  "dependencyDashboard": true,
   "forkProcessing": "disabled",
+  "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
+  "onboarding": true,
+  "packageRules": [
+    {
+      "automerge": false,
+      "commitMessagePrefix": "[MAJOR] ",
+      "description": "Always create PRs for major changes.",
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "addLabels": [
+        "patch"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    },
+    {
+      "addLabels": [
+        "minor"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ]
+    },
+    {
+      "addLabels": [
+        "major"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "addLabels": [
+        "docker"
+      ],
+      "matchCategories": [
+        "docker"
+      ]
+    },
+    {
+      "addLabels": [
+        "python"
+      ],
+      "matchCategories": [
+        "python"
+      ]
+    },
+    {
+      "addLabels": [
+        "ci"
+      ],
+      "matchCategories": [
+        "ci"
+      ]
+    }
+  ],
+  "platform": "github",
+  "rebaseWhen": "behind-base-branch",
   "repositories": [
     "TheRealArthurDent/renovate",
     "TheRealArthurDent/iracing-settings"
   ],
-  "dependencyDashboard": true,
-  "packageRules": [
-    {
-      "description": "Always create PRs for major changes.",
-      "commitMessagePrefix": "[MAJOR] ",
-      "matchUpdateTypes": ["major"],
-      "automerge": false
-    },
-    {
-      "matchUpdateTypes": ["patch"],
-      "addLabels": ["patch"]
-    },
-    {
-      "matchUpdateTypes": ["minor"],
-      "addLabels": ["minor"]
-    },
-    {
-      "matchUpdateTypes": ["major"],
-      "addLabels": ["major"]
-    },
-    {
-      "matchCategories": ["docker"],
-      "addLabels": ["docker"]
-    },
-    {
-      "matchCategories": ["python"],
-      "addLabels": ["python"]
-    },
-    {
-      "matchCategories": ["ci"],
-      "addLabels": ["ci"]
-    }
-  ]
+  "reviewers": [
+    "TheRealArthurDent",
+    "LunaticGardener"
+  ],
+  "username": "P4ranoidAndroid"
 }
