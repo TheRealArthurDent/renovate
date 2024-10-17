@@ -1,23 +1,22 @@
 {
-  "branchPrefix": "renovate/",
+  "assignees": [
+    "TheRealArthurDent"
+  ],
   "branchNameStrict": true,
+  "branchPrefix": "renovate/",
   "dryRun": "full",
-  "username": "renovate",
   "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
+  "includeForks": false,
+  "onboarding": true,
+  "packageRules": [],
+  "platform": "github",
+  "rebaseWhen": "behind-base-branch",
+  "repositories": [
+    "TheRealArthurDent/renovate"
+  ],
   "reviewers": [
     "TheRealArthurDent",
     "LunaticGardener"
   ],
-  "assignees": [
-    "TheRealArthurDent"
-  ],
-  "rebaseWhen": "behind-base-branch",
-  "onboarding": true,
-  "platform": "github",
-  "includeForks": false,
-  "repositories": [
-    "TheRealArthurDent/renovate"
-  ],
-  "packageRules": [
-  ]
+  "username": "renovate"
 }
