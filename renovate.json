@@ -3,6 +3,16 @@
   "reviewers": [
     "TheRealArthurDent"
   ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update rev variables in pre-commit-config",
+      "fileMatch": ["^.pre-commit-config.yaml$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s(?:ENV|ARG) rev: (?<currentValue>.+?)\\s"
+      ]
+    }
+  ],
   "packageRules": [
     {
       "description": "Auto merge all minor and patch updates to renovate itself. Do it without a PR to reduce noise.",
