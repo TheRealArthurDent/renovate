@@ -2,6 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
+    # renovate: datasource=github-releases depName=pre-commit-hooks packageName=pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
@@ -10,16 +11,19 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/renovatebot/pre-commit-hooks
+    # renovate: datasource=github-releases depName=renovate-config-validator packageName=renovatebot/pre-commit-hooks
     rev: 38.120.1
     hooks:
       - id: renovate-config-validator
 
   - repo: https://github.com/rhysd/actionlint
+    # renovate: datasource=github-releases depName=actionlint packageName=rhysd/actionlint
     rev: v1.7.3
     hooks:
       - id: actionlint-docker
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
+    # renovate: datasource=github-releases depName=markdownlint packageName=igorshubovych/markdownlint-cli
     rev: v0.42.0
     hooks:
       - id: markdownlint-docker
