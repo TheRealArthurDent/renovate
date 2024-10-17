@@ -9,7 +9,7 @@
       "description": "Update rev variables in pre-commit-config",
       "fileMatch": ["^.pre-commit-config.yaml$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s?rev:\\s?\\\"?(?<currentValue>[\\w+\\.\\-]*)\""
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s+rev:\\s+[\"']?(?<currentValue>[\\w+\\.\\-]*)[\"']?"
       ]
     }
   ],
