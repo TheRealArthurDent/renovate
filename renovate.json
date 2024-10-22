@@ -84,7 +84,7 @@
         "digest"
       ],
       "schedule": [
-        "before 5am on Monday"
+        "before 5am on Tuesday"
       ]
     },
     {
@@ -102,7 +102,7 @@
         "major"
       ],
       "schedule": [
-        "before 5am on Monday"
+        "before 5am on Tuesday"
       ]
     }
   ],
