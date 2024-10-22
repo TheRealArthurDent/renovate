@@ -82,6 +82,9 @@
         "patch",
         "pin",
         "digest"
+      ],
+      "schedule": [
+        "before 5am on Monday"
       ]
     },
     {
@@ -97,6 +100,9 @@
       ],
       "matchUpdateTypes": [
         "major"
+      ],
+      "schedule": [
+        "before 5am on Monday"
       ]
     }
   ],
