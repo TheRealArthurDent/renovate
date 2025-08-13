@@ -75,7 +75,7 @@
         "github-releases"
       ],
       "matchManagers": [
-        "regex"
+        "custom.regex"
       ],
       "matchUpdateTypes": [
         "minor",
@@ -96,7 +96,7 @@
         "github-releases"
       ],
       "matchManagers": [
-        "regex"
+        "custom.regex"
       ],
       "matchUpdateTypes": [
         "major"
