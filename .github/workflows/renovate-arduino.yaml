@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5.0.0
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@a889a8abcb11ef7feaafaf5e483ea01d4bf7774e # v43.0.5
+        uses: renovatebot/github-action@e2421a9a80287bba9997b41a15ea1e5585d96925 # v43.0.16
         with:
           configurationFile: config-arduino.json
           token: ${{ secrets.RENOVATE_TOKEN }}
