@@ -76,7 +76,8 @@
     "TheRealArthurDent/nextcloud",
     "TheRealArthurDent/private-cloud-infrastructure",
     "TheRealArthurDent/private-cloud-nextcloud",
-    "TheRealArthurDent/node-red-flows"
+    "TheRealArthurDent/node-red-flows",
+    "TheRealArthurDent/ikea-firmware-downloader"
   ],
   "reviewers": [
     "TheRealArthurDent",
