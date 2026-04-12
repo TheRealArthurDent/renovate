@@ -22,7 +22,6 @@
   "packageRules": [
     {
       "automerge": false,
-      "commitMessagePrefix": "[MAJOR] ",
       "description": "Always create PRs for major changes.",
       "matchUpdateTypes": [
         "major"
