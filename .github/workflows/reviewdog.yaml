@@ -25,13 +25,13 @@ jobs:
           fail_on_error: true
 
       - name: YAML lint
-        uses: reviewdog/action-yamllint@v1.21.0
+        uses: reviewdog/action-yamllint@v1.22.0
         with:
           reporter: github-pr-review
           fail_on_error: true
 
       - name: Markdown lint
-        uses: reviewdog/action-markdownlint@v0.26.2
+        uses: reviewdog/action-markdownlint@v0.27.0
         with:
           reporter: github-pr-review
           fail_on_error: true
