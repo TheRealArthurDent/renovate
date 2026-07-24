@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.0.3
+        uses: actions/checkout@v6.1.0
 
       - name: Spellcheck
         uses: reviewdog/action-misspell@v1.27.0
@@ -19,13 +19,13 @@ jobs:
           fail_on_error: true
 
       - name: Action lint
-        uses: reviewdog/action-actionlint@v1.72.0
+        uses: reviewdog/action-actionlint@v1.73.0
         with:
           reporter: github-pr-review
           fail_on_error: true
 
       - name: YAML lint
-        uses: reviewdog/action-yamllint@v1.22.0
+        uses: reviewdog/action-yamllint@v1.23.0
         with:
           reporter: github-pr-review
           fail_on_error: true
