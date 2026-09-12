@@ -31,7 +31,7 @@ jobs:
           fail_on_error: true
 
       - name: Markdown lint
-        uses: reviewdog/action-markdownlint@v0.29.0
+        uses: reviewdog/action-markdownlint@v0.29.1
         with:
           reporter: github-pr-review
           fail_on_error: true
