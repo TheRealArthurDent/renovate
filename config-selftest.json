@@ -5,7 +5,7 @@
   "branchNameStrict": true,
   "branchPrefix": "renovate/",
   "dryRun": "full",
-  "gitAuthor": "Renovate Bot <dobecksmischer+renovate@gmail.com>",
+  "gitAuthor": "Renovate Bot <118576523+P4ranoidAndroid@users.noreply.github.com>",
   "includeForks": false,
   "onboarding": true,
   "packageRules": [],
