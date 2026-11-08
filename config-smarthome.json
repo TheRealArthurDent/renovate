@@ -71,7 +71,7 @@
   "platform": "github",
   "rebaseWhen": "behind-base-branch",
   "repositories": [
-    "TheRealArthurDent/raspberry",
+    "TheRealArthurDent/infrastructure",
     "TheRealArthurDent/smart-home",
     "TheRealArthurDent/nextcloud",
     "TheRealArthurDent/private-cloud-infrastructure",
