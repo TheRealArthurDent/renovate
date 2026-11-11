@@ -73,9 +73,7 @@
   "repositories": [
     "TheRealArthurDent/infrastructure",
     "TheRealArthurDent/smart-home",
-    "TheRealArthurDent/nextcloud",
-    "TheRealArthurDent/private-cloud-infrastructure",
-    "TheRealArthurDent/private-cloud-nextcloud",
+    "TheRealArthurDent/private-cloud",
     "TheRealArthurDent/node-red-flows",
     "TheRealArthurDent/ikea-firmware-downloader"
   ],
