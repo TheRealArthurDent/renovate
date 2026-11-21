@@ -44,9 +44,11 @@ its own rules:
 What it sets:
 
 - `config:recommended` and the pre-commit manager.
-- A `minimumReleaseAge` of 3 days for every update, so a broken or hijacked
+- A `minimumReleaseAge` of 14 days for every update, so a broken or hijacked
   release has time to be pulled before it lands. Updates whose registry has
-  no release timestamp aren't held back.
+  no release timestamp aren't held back. Security PRs (OSV and GitHub
+  alerts) ignore it: Renovate's `vulnerabilityAlerts` default sets
+  `minimumReleaseAge: null`.
 - Security PRs from the OSV database (`osvVulnerabilityAlerts`).
 - GitHub Actions: minor, patch, pin and digest updates in one PR with GitHub
   auto-merge, majors as single PRs.
