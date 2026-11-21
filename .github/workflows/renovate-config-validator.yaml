@@ -11,16 +11,20 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      # The same image the Renovate runs use (renovatebot/github-action's default renovate-version), so the
+      # validator knows exactly the options, presets and migrations of the runs.
+      RENOVATE_IMAGE: ghcr.io/renovatebot/renovate:44
     steps:
       - name: Checkout code
         uses: actions/checkout@v7.0.1
 
-      - name: Set up Node.js 20.x
-        uses: actions/setup-node@v7.1.0
-        with:
-          node-version: '26'
+      - name: Validate the global configs of the Renovate runs
+        run: >-
+          docker run --rm --volume "$PWD:/work:ro" --workdir /work --entrypoint renovate-config-validator
+          "$RENOVATE_IMAGE" --strict config.json config-*.json
 
-      - name: Run renovate config validator
-        uses: rinchsan/renovate-config-validator@v0.2.1
-        with:
-          pattern: 'renovate*.json'
+      - name: Validate this repo's config and the shared presets
+        run: >-
+          docker run --rm --volume "$PWD:/work:ro" --workdir /work --entrypoint renovate-config-validator
+          "$RENOVATE_IMAGE" --strict --no-global renovate.json homelab.json

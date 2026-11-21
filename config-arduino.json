@@ -7,15 +7,17 @@
     {
       "customType": "regex",
       "description": "Update rev variables in pre-commit-config",
-      "fileMatch": [
-        "^.pre-commit-config.yaml$"
+      "managerFilePatterns": [
+        "/(^|/)\\.pre-commit-config\\.yaml$/"
       ],
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s+rev:\\s+[\"']?(?<currentValue>[\\w+\\.\\-]*)[\"']?"
       ]
     }
   ],
-  "dependencyDashboard": true,
+  "dependencyDashboard": {
+    "enabled": true
+  },
   "forkProcessing": "disabled",
   "gitAuthor": "Renovate Bot <118576523+P4ranoidAndroid@users.noreply.github.com>",
   "onboarding": true,
