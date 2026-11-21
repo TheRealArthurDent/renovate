@@ -1,0 +1,67 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Shared Renovate config of the homelab repos (infrastructure, smart-home, private-cloud, homelab-engineering). Extend it with github>TheRealArthurDent/renovate:homelab; repo-specific rules stay in the repo's renovate.json.",
+  "extends": [
+    "config:recommended",
+    ":enablePreCommit"
+  ],
+  "minimumReleaseAge": "3 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "addLabels": [
+        "auto-merge"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "description": "GitHub Actions: minor, patch, pin and digest updates in one PR, merged by GitHub auto-merge once the required checks pass. The rulesets require a PR for main, so a branch automerge can't push there.",
+      "groupName": "github-actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "platformAutomerge": true
+    },
+    {
+      "automerge": false,
+      "description": "GitHub Actions majors: a PR each, merged by hand.",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    },
+    {
+      "addLabels": [
+        "auto-merge"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "description": "pre-commit hooks: minor, patch, pin and digest updates in one weekly PR, merged by GitHub auto-merge once the required checks pass. renovatebot/pre-commit-hooks alone releases almost daily. The ansible-lint hook is left out: it goes with the pip packages in the repos' ansible-devtools group.",
+      "groupName": "pre-commit hooks",
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "matchPackageNames": [
+        "!ansible/ansible-lint"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "platformAutomerge": true,
+      "schedule": [
+        "before 6am on monday"
+      ]
+    }
+  ]
+}
