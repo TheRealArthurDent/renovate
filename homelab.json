@@ -62,6 +62,27 @@
       "schedule": [
         "before 6am on monday"
       ]
+    },
+    {
+      "addLabels": [
+        "auto-merge"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "description": "Docker image patches: merged by GitHub auto-merge once the required checks pass, and only once the release is minimumReleaseAge old. The release timestamp is required here, so an image without one (only Docker Hub has them; ghcr.io and other registries don't) isn't auto-merged on day one: those are left out and stay PRs merged by hand. The merge lands on main; it reaches the Pis with the next Ansible run.",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "!ghcr.io/**",
+        "!lscr.io/**",
+        "!quay.io/**"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "minimumReleaseAgeBehaviour": "timestamp-required",
+      "platformAutomerge": true
     }
   ]
 }

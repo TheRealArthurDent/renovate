@@ -54,11 +54,15 @@ What it sets:
   auto-merge, majors as single PRs.
 - pre-commit hooks: minor, patch, pin and digest updates in one weekly PR
   (Monday morning) with GitHub auto-merge.
+- Docker image patches with GitHub auto-merge, but only once the release is
+  14 days old. This rule requires the release timestamp, which only Docker
+  Hub provides; images from ghcr.io, lscr.io and quay.io are left out and
+  stay PRs merged by hand.
 
 Auto-merge uses GitHub's auto-merge on the PR (`automergeType: pr`): the
 repos' rulesets require a PR and green checks for `main`, so a branch
-automerge can't push there. Docker images are never auto-merged: `main` is
-what the next Ansible run rolls out to the Pis.
+automerge can't push there. Minor and major image updates are never
+auto-merged: `main` is what the next Ansible run rolls out to the Pis.
 
 Renovate reads the preset from `main`, so a change to it applies to all repos
 at their next run.
