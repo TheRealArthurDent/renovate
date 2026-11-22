@@ -9,6 +9,7 @@
   "gitIgnoredAuthors": [
     "118576523+P4ranoidAndroid@users.noreply.github.com"
   ],
+  "ignorePrAuthor": true,
   "onboarding": true,
   "packageRules": [],
   "platform": "github",
