@@ -16,28 +16,30 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Spellcheck
-        uses: reviewdog/action-misspell@v1.31.0
+        uses: reviewdog/action-misspell@c846b6b0996029d2d39540c8ffebebbd957072db # v1.31.0
         with:
           reporter: github-pr-review
           fail_on_error: true
 
       - name: Action lint
-        uses: reviewdog/action-actionlint@v1.83.0
+        uses: reviewdog/action-actionlint@a7d35aaf8c309203a4ae861d32b7bd490baa7bf3 # v1.83.0
         with:
           reporter: github-pr-review
           fail_on_error: true
 
       - name: YAML lint
-        uses: reviewdog/action-yamllint@v1.26.0
+        uses: reviewdog/action-yamllint@020fba38ce9fed550c704d933aeeb7d6360f7d47 # v1.26.0
         with:
           reporter: github-pr-review
           fail_on_error: true
 
       - name: Markdown lint
-        uses: reviewdog/action-markdownlint@v0.33.0
+        uses: reviewdog/action-markdownlint@55f2ecf4c813c1cfac36953c1c40a46ec5c28f70 # v0.33.0
         with:
           reporter: github-pr-review
           fail_on_error: true

@@ -23,8 +23,10 @@ Dashboards are still found (`ignorePrAuthor`, which makes Renovate read all
 PRs and issues instead of only its own). Both can go once no open Renovate PR
 or branch of the former account is left.
 
-The app needs these repository permissions and must be installed on every repo
-the runs list: Checks (read), Commit statuses, Contents, Issues, Pull requests
+Each run limits its token to the repositories of its config plus this repo
+(for the shared presets) and to the permissions Renovate uses; the self-test
+only reads. The app needs these repository permissions and must be installed
+on every repo the runs list: Checks (read), Commit statuses, Contents, Issues, Pull requests
 and Workflows (read and write), Dependabot alerts (read), Metadata (read).
 
 The runs:
@@ -101,3 +103,9 @@ get checks.
 
 The workflows give `GITHUB_TOKEN` read access to the contents only; Reviewdog
 adds write access to pull requests for its review comments.
+
+## Workflow lint
+
+[zizmor](https://docs.zizmor.sh/) checks the workflows, as a pre-commit hook
+and in the `zizmor` workflow on every PR. The workflow runs the version of the
+hook in `.pre-commit-config.yaml`, which Renovate updates.
