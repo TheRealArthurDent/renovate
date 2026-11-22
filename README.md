@@ -13,21 +13,22 @@ A repo just to streamline renovate executions and config
 ## Runs
 
 Each workflow runs self-hosted Renovate with its own global config. It runs as
-the repo owner's GitHub App: the first step creates an installation token
-(valid for an hour) from the repository variable `RENOVATE_APP_CLIENT_ID` and the
-secret `RENOVATE_APP_PRIVATE_KEY`, and Renovate takes its username and commit
-author from the app. Commits are made through the API, so GitHub shows them as
-verified. Branches the former bot account `P4ranoidAndroid` created still
-count as Renovate's own (`gitIgnoredAuthors`), and its PRs and Dependency
-Dashboards are still found (`ignorePrAuthor`, which makes Renovate read all
-PRs and issues instead of only its own). Both can go once no open Renovate PR
-or branch of the former account is left.
+the repo owner's GitHub App: before Renovate starts, the workflow creates an
+installation token (valid for an hour) from the repository variable
+`RENOVATE_APP_CLIENT_ID` and the secret `RENOVATE_APP_PRIVATE_KEY`, and Renovate
+takes its username and commit author from the app. Commits are made through the
+API, so GitHub shows them as verified. Branches the former bot account
+`P4ranoidAndroid` created still count as Renovate's own (`gitIgnoredAuthors`),
+and its PRs and Dependency Dashboards are still found (`ignorePrAuthor`, which
+makes Renovate read all PRs and issues instead of only its own). Both can go
+once no open Renovate PR or branch of the former account is left.
 
-Each run limits its token to the repositories of its config plus this repo
-(for the shared presets) and to the permissions Renovate uses; the self-test
-only reads. The app needs these repository permissions and must be installed
-on every repo the runs list: Checks (read), Commit statuses, Contents, Issues, Pull requests
-and Workflows (read and write), Dependabot alerts (read), Metadata (read).
+Each run limits its token to the repositories of its config plus this repo (for
+the shared presets) and to the permissions Renovate uses; the self-test only
+reads. The app needs these repository permissions and must be installed on every
+repo the runs list: Checks (read), Commit statuses, Contents, Issues, Pull
+requests and Workflows (read and write), Dependabot alerts (read), Metadata
+(read).
 
 The runs:
 
