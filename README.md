@@ -71,8 +71,8 @@ What it sets:
   (`helpers:pinGitHubActionDigests`). Their updates, digest and pin updates
   included, always wait the 14 days: the rule requires the release timestamp,
   which GitHub tags and releases have.
-- GitHub Actions: minor, patch, pin and digest updates in one PR with GitHub
-  auto-merge, majors as single PRs.
+- GitHub Actions: minor, patch, pin, pinDigest and digest updates in one PR
+  with GitHub auto-merge, majors as single PRs.
 - pre-commit hooks: minor, patch, pin and digest updates in one weekly PR
   (Monday morning) with GitHub auto-merge.
 - Docker image patches with GitHub auto-merge, but only once the release is

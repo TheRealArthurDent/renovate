@@ -23,7 +23,7 @@
       ],
       "automerge": true,
       "automergeType": "pr",
-      "description": "GitHub Actions: minor, patch, pin and digest updates in one PR, merged by GitHub auto-merge once the required checks pass. The rulesets require a PR for main, so a branch automerge can't push there.",
+      "description": "GitHub Actions: minor, patch, pin, pinDigest and digest updates in one PR, merged by GitHub auto-merge once the required checks pass. The rulesets require a PR for main, so a branch automerge can't push there.",
       "groupName": "github-actions",
       "matchManagers": [
         "github-actions"
@@ -32,6 +32,7 @@
         "minor",
         "patch",
         "pin",
+        "pinDigest",
         "digest"
       ],
       "platformAutomerge": true

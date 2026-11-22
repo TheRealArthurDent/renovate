@@ -53,6 +53,7 @@
         "minor",
         "patch",
         "pin",
+        "pinDigest",
         "digest"
       ],
       "platformAutomerge": false
