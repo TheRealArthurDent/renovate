@@ -1,14 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "minimumReleaseAge": "7 days",
+  "extends": [
+    "helpers:pinGitHubActionDigests"
+  ],
+  "minimumReleaseAge": "14 days",
   "packageRules": [
     {
       "addLabels": [
         "auto-merge"
       ],
       "automerge": true,
-      "automergeType": "branch",
-      "description": "Auto merge all minor and patch updates to renovate itself. Do it without a PR to reduce noise.",
+      "automergeType": "pr",
+      "description": "Auto merge all minor and patch updates to renovate itself. Renovate merges the PR itself once its checks pass: the workflows run on pull requests only, so a branch without a PR gets no checks.",
       "groupName": "renovate",
       "matchPackageNames": "renovatebot/github-action",
       "matchUpdateTypes": [
@@ -17,6 +20,7 @@
         "pin",
         "digest"
       ],
+      "platformAutomerge": false,
       "schedule": [
         "before 5am on Monday"
       ]
@@ -39,8 +43,8 @@
         "auto-merge"
       ],
       "automerge": true,
-      "automergeType": "branch",
-      "description": "Auto merge all minor and patch updates to github-actions. Do it without a PR to reduce noise.",
+      "automergeType": "pr",
+      "description": "Auto merge all minor and patch updates to github-actions. Renovate merges the PR itself once its checks pass: the workflows run on pull requests only, so a branch without a PR gets no checks.",
       "groupName": "github-actions",
       "matchManagers": [
         "github-actions"
@@ -50,7 +54,8 @@
         "patch",
         "pin",
         "digest"
-      ]
+      ],
+      "platformAutomerge": false
     },
     {
       "automerge": false,
@@ -69,8 +74,8 @@
         "auto-merge"
       ],
       "automerge": true,
-      "automergeType": "branch",
-      "description": "Auto merge all minor and patch updates to pre-commit actions. Do it without a PR to reduce noise.",
+      "automergeType": "pr",
+      "description": "Auto merge all minor and patch updates to pre-commit actions. Renovate merges the PR itself once its checks pass: the workflows run on pull requests only, so a branch without a PR gets no checks.",
       "groupName": "pre-commit",
       "matchDatasources": [
         "github-releases"
@@ -84,6 +89,7 @@
         "pin",
         "digest"
       ],
+      "platformAutomerge": false,
       "schedule": [
         "before 5am on Tuesday"
       ]
