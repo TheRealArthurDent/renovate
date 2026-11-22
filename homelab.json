@@ -3,12 +3,20 @@
   "description": "Shared Renovate config of the homelab repos (infrastructure, smart-home, private-cloud, homelab-engineering). Extend it with github>TheRealArthurDent/renovate:homelab; repo-specific rules stay in the repo's renovate.json.",
   "extends": [
     "config:recommended",
-    ":enablePreCommit"
+    ":enablePreCommit",
+    "helpers:pinGitHubActionDigests"
   ],
   "minimumReleaseAge": "14 days",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
   "osvVulnerabilityAlerts": true,
   "packageRules": [
+    {
+      "description": "GitHub Actions are pinned to a commit SHA (the version stays as a comment) and every update of them, digest and pin updates included, waits for minimumReleaseAge. The release timestamp is required here: GitHub tags and releases always have one.",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "minimumReleaseAgeBehaviour": "timestamp-required"
+    },
     {
       "addLabels": [
         "auto-merge"

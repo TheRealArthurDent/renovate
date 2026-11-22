@@ -6,6 +6,9 @@ on:
     - cron: '0 4,5 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   renovate:
     runs-on: ubuntu-latest

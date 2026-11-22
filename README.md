@@ -50,6 +50,10 @@ What it sets:
   alerts) ignore it: Renovate's `vulnerabilityAlerts` default sets
   `minimumReleaseAge: null`.
 - Security PRs from the OSV database (`osvVulnerabilityAlerts`).
+- GitHub Actions pinned to a commit SHA, with the version as a comment
+  (`helpers:pinGitHubActionDigests`). Their updates, digest and pin updates
+  included, always wait the 14 days: the rule requires the release timestamp,
+  which GitHub tags and releases have.
 - GitHub Actions: minor, patch, pin and digest updates in one PR with GitHub
   auto-merge, majors as single PRs.
 - pre-commit hooks: minor, patch, pin and digest updates in one weekly PR
@@ -71,3 +75,15 @@ The `Config Validator` workflow checks all of these files with
 `renovate-config-validator --strict` from the same Renovate image the runs
 use: the global configs as global config, `renovate.json` and `homelab.json`
 as repo config.
+
+## This repo's own config
+
+`renovate.json` covers this repo only and doesn't extend the shared preset (it
+updates its pre-commit hooks through the regex manager of the global configs).
+It pins GitHub Actions to a commit SHA as well and holds every update back for
+14 days. Auto-merged updates get a PR, and Renovate merges it once its checks
+pass: the workflows run on pull requests, so a branch without a PR would never
+get checks.
+
+The workflows give `GITHUB_TOKEN` read access to the contents only; Reviewdog
+adds write access to pull requests for its review comments.
