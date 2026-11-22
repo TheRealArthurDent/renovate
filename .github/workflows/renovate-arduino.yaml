@@ -13,6 +13,16 @@ jobs:
   renovate:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: List the repositories of this run
+        id: repos
+        # The repositories of the config, plus this repo for the shared presets.
+        run: >-
+          echo "list=$(jq -r '[.repositories[] | split("/")[1]] + ["renovate"] | unique | join(",")' config-arduino.json)"
+          >> "$GITHUB_OUTPUT"
       - name: Create a GitHub App token
         id: app-token
         uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
@@ -20,8 +30,14 @@ jobs:
           client-id: ${{ vars.RENOVATE_APP_CLIENT_ID }}
           private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
+          repositories: ${{ steps.repos.outputs.list }}
+          permission-checks: read
+          permission-contents: write
+          permission-issues: write
+          permission-pull-requests: write
+          permission-statuses: write
+          permission-vulnerability-alerts: read
+          permission-workflows: write
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@266fef21329c44765ad42f9dea1f01f5d2d91084 # v46.3.13
         with:

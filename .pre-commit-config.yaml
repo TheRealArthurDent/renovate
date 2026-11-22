@@ -33,3 +33,9 @@ repos:
     rev: v0.49.1
     hooks:
       - id: markdownlint-docker
+
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    # renovate: datasource=github-tags depName=zizmor packageName=zizmorcore/zizmor-pre-commit
+    rev: v1.32.0
+    hooks:
+      - id: zizmor
