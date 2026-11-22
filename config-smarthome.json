@@ -80,7 +80,6 @@
     "TheRealArthurDent/infrastructure",
     "TheRealArthurDent/smart-home",
     "TheRealArthurDent/private-cloud",
-    "TheRealArthurDent/node-red-flows",
     "TheRealArthurDent/ikea-firmware-downloader"
   ],
   "reviewers": [
