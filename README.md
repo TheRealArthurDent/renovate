@@ -12,8 +12,19 @@ A repo just to streamline renovate executions and config
 
 ## Runs
 
-Each workflow runs self-hosted Renovate as `P4ranoidAndroid` with its own
-global config:
+Each workflow runs self-hosted Renovate with its own global config. It runs as
+the repo owner's GitHub App: the first step creates an installation token
+(valid for an hour) from the repository variable `RENOVATE_APP_ID` and the
+secret `RENOVATE_APP_PRIVATE_KEY`, and Renovate takes its username and commit
+author from the app. Commits are made through the API, so GitHub shows them as
+verified. Branches the former bot account `P4ranoidAndroid` created still
+count as Renovate's own (`gitIgnoredAuthors`).
+
+The app needs these repository permissions and must be installed on every repo
+the runs list: Checks (read), Commit statuses, Contents, Issues, Pull requests
+and Workflows (read and write), Dependabot alerts (read), Metadata (read).
+
+The runs:
 
 - `renovate.yaml` with `config.json`: renovate, iracing-settings
 - `renovate-smarthome.yaml` with `config-smarthome.json`: homelab-engineering,
@@ -24,7 +35,7 @@ global config:
 - `renovate-selftest.yaml` with `config-selftest.json`: this repo, as a dry
   run on every PR
 
-The global configs only hold what the runs need (bot account, repositories,
+The global configs only hold what the runs need (repositories, ignored authors,
 labels, the regex manager for `# renovate:` comments in
 `.pre-commit-config.yaml`). They are copies of each other; keep them in sync.
 

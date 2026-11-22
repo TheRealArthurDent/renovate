@@ -19,7 +19,9 @@
     "enabled": true
   },
   "forkProcessing": "disabled",
-  "gitAuthor": "Renovate Bot <118576523+P4ranoidAndroid@users.noreply.github.com>",
+  "gitIgnoredAuthors": [
+    "118576523+P4ranoidAndroid@users.noreply.github.com"
+  ],
   "onboarding": true,
   "packageRules": [
     {
@@ -87,6 +89,5 @@
   "reviewers": [
     "TheRealArthurDent",
     "LunaticGardener"
-  ],
-  "username": "P4ranoidAndroid"
+  ]
 }

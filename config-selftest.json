@@ -6,7 +6,9 @@
   "branchPrefix": "renovate/",
   "dryRun": "full",
   "forkProcessing": "disabled",
-  "gitAuthor": "Renovate Bot <118576523+P4ranoidAndroid@users.noreply.github.com>",
+  "gitIgnoredAuthors": [
+    "118576523+P4ranoidAndroid@users.noreply.github.com"
+  ],
   "onboarding": true,
   "packageRules": [],
   "platform": "github",
@@ -17,6 +19,5 @@
   "reviewers": [
     "TheRealArthurDent",
     "LunaticGardener"
-  ],
-  "username": "renovate"
+  ]
 }
